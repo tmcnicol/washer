@@ -25,11 +25,11 @@ export function replaceDripUrl(url) {
 	if (href.includes("dripemail")) {
 		const token = href.split("/").pop();
 		const target = parseJWTPayload(token)["url"];
-		const baseURL = target.split("?")[0];
-		if (!baseURL) {
+		if (!target) {
 			return
 		}
-		url.href = target
+		const baseURL = new URL(target);
+		url.href = new URL(baseURL.pathname, baseURL.origin);
 	}
 }
 
