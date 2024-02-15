@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build --outDir build",
+    "clean": "rm -r build",
     "test:watch": "vitest ./scripts/"
   },
   "author": "tmcnicol",
