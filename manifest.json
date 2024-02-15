@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+	"name": "Washer",
+	"description": "replace drip links in gmail",
+	"version": "0.1",
+	"background": {
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches":["<all_urls>"],
+			"js":["./build/washer.js"],
+			"run": "document_idle"
+		}
+	]
+}

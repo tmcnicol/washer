@@ -1,0 +1,16 @@
+{
+  "name": "washer",
+  "version": "0.1.0",
+  "description": "Washer, to stop those pesky drips.",
+  "type": "module",
+  "scripts": {
+    "build": "vite build --outDir build",
+    "test:watch": "vitest ./scripts/"
+  },
+  "author": "tmcnicol",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.1.0",
+    "vitest": "^1.2.2"
+  }
+}
